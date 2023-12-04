@@ -12,8 +12,6 @@ android {
         applicationId = "com.cloudycode.native_activity"
         minSdk = 24
         targetSdk = 30
-        versionCode = 1
-        versionName = "Beta"
 
         externalNativeBuild {
             cmake {
@@ -25,11 +23,6 @@ android {
     externalNativeBuild {
         cmake {
             path("src/main/cpp/CMakeLists.txt")
-            version = "3.28.0-rc3"
         }
     }
-}
-
-dependencies {
-    implementation(files(fileTree("libs") { include("*.jar") }))
 }
